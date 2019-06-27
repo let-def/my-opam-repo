@@ -29,8 +29,8 @@ build: [
     "--disable-naked-pointers"
     "--disable-flat-float-array"
   ] {os = "openbsd" | os = "freebsd" | os = "macos"}
-  [make "world"]
-  [make "world.opt"]
+  [make "world" "-j" jobs]
+  [make "world.opt" "-j" jobs]
 ]
 install: [make "install"]
 url {
