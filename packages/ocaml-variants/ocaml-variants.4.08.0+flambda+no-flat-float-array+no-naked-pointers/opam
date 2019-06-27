@@ -18,14 +18,13 @@ setenv: CAML_LD_LIBRARY_PATH = "%{lib}%/stublibs"
 build: [
   ["./configure" "--prefix=%{prefix}%"
                  "--disable-naked-pointers"
-                 "--enable-flambda" "--disable-flat-float-array"]
+                 "--disable-flat-float-array"]
     {os != "openbsd" & os != "freebsd" & os != "macos"}
   [
     "./configure"
     "--prefix=%{prefix}%"
     "CC=cc"
     "ASPP=cc -c"
-    "--enable-flambda"
     "--disable-naked-pointers"
     "--disable-flat-float-array"
   ] {os = "openbsd" | os = "freebsd" | os = "macos"}
