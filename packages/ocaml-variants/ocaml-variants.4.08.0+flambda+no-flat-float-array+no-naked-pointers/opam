@@ -31,8 +31,10 @@ build: [
   [make "world" "-j" jobs]
   [make "world.opt" "-j" jobs]
 ]
+patches: ["typ_int.patch"]
 install: [make "install"]
 url {
   src: "https://github.com/ocaml/ocaml/archive/4.08.0.tar.gz"
   checksum: "md5=42ed24e9a7c0e3998cab7d5e7c9f7618"
 }
+extra-files: [["typ_int.patch" "md5=6058ac0dd1db8e0c5b4eec66278b522e"]]
